@@ -149,9 +149,17 @@ const TikTokPromo = () => {
             ))}
           </div>
 
-          {/* Testimonial carousel */}
-          <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 mb-8 max-w-md mx-auto border border-white/20">
-            <div className="text-center">
+          {/* Testimonial carousel with background image */}
+          <div className="relative bg-white/10 backdrop-blur-md rounded-2xl p-6 mb-8 max-w-md mx-auto border border-white/20 overflow-hidden">
+            <div 
+              className="absolute inset-0 opacity-20"
+              style={{
+                backgroundImage: `url('https://images.pexels.com/photos/259027/pexels-photo-259027.jpeg')`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center'
+              }}
+            ></div>
+            <div className="relative z-10 text-center">
               <div className="text-2xl font-bold text-green-400 mb-2">
                 {promoContent.testimonials[currentTestimonial].amount}
               </div>
