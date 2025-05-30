@@ -77,8 +77,17 @@ const TikTokPromo = () => {
 
   return (
     <div className="min-h-screen bg-black text-white relative overflow-hidden">
+      {/* Background image with overlay */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `url('https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2')`,
+          filter: 'blur(1px) brightness(0.3)'
+        }}
+      ></div>
+      
       {/* Background gradient animation */}
-      <div className="absolute inset-0 bg-gradient-to-br from-purple-900 via-blue-900 to-indigo-900 opacity-50"></div>
+      <div className="absolute inset-0 bg-gradient-to-br from-purple-900/70 via-blue-900/70 to-indigo-900/70"></div>
       
       {/* Floating money emojis */}
       <div className="absolute inset-0 pointer-events-none">
